@@ -1,22 +1,22 @@
-import { Context } from "../../context/Context";
-import React, { useContext, useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Box } from "@mui/material";
+import React from "react";
+import MissionDetailsCommentsPart from "./MissionDetailsCommentsPart/MissionDetailsCommentsPart";
+import MissionDetailsItem from "./MissionDetailsItem/MissionDetailsItem";
+
+const missionDetailsBox = {
+  width: '80%',
+  margin: '0 auto',
+  padding: '4rem 0',
+  display: 'flex',
+  justifyContent: 'space-between'
+}
 
 export default function MissionDetails() {
-  const [cardDetails, setCardDetails] = useState({});
-
-  const { missions } = useContext(Context);
-  const { id } = useParams();
-
-  useEffect(() => {
-    const card = missions.find((mission) => mission.id === id);
-    setCardDetails(card);
-  }, []);
-
   
   return (
-    <div>
-      <div>{cardDetails.name}</div>
-    </div>
+    <Box sx={missionDetailsBox}>
+      <MissionDetailsItem/>
+      <MissionDetailsCommentsPart/>
+    </Box>
   );
 }

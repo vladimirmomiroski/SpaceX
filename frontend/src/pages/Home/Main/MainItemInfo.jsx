@@ -1,7 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import DateFn from "./DateFn";
-import Main from "./Main";
 import MainItemInfoDate from "./MainItemInfoDate";
 
 const infoBox = {
