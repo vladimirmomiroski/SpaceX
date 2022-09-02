@@ -24,7 +24,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/missionDetails" element={<MissionDetails/>} />
+          <Route path="/missionDetails/:id" element={<MissionDetails/>} />
         </Routes>
       </ThemeProvider>
     </div>

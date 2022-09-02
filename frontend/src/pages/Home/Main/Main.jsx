@@ -1,0 +1,15 @@
+import { Grid } from "@mui/material";
+import React, { useContext } from "react";
+import { Context } from "../../../context/Context";
+import MainItem from "./MainItem";
+
+export default function Main() {
+  const { missions } = useContext(Context);
+  console.log(missions);
+
+  return <Grid container spacing={4}>
+    {missions.length && missions.map(el => (
+        <MainItem key={el.id} item={el} />
+    ))}
+  </Grid>;
+}

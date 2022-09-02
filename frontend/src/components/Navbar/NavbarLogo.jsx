@@ -1,21 +1,24 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 
 const logoContainer = {
   display: "flex",
   alignItems: "center",
-  ':hover': {
-    cursor: 'pointer',
-  }
+  marginLeft: "1.5rem",
+  ":hover": {
+    cursor: "pointer",
+  },
 };
 
-
 export default function NavbarLogo() {
+  const location = useNavigate();
+
   return (
-    <Box sx={logoContainer}>
-  
-      <Typography color={'primary.main'} variant="h4">SpaceX</Typography>
+    <Box sx={logoContainer} onClick={() => location("/")}>
+      <Typography color={"secondary.secondary"} variant="h4">
+        SpaceX
+      </Typography>
     </Box>
   );
 }

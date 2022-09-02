@@ -1,11 +1,17 @@
-import React, { useContext } from 'react';
-import { Context } from '../../context/Context';
+import React from "react";
+import Main from "./Main/Main";
+import { Box } from '@mui/material';
+
+const mainContainer = {
+     width: '80%',
+     margin: '0 auto',
+     padding: '3rem 0'
+}
 
 export default function Home() {
-
-  const { missions } = useContext(Context)
-  console.log(missions)
   return (
-    <div>Home</div>
-  )
+    <Box sx={mainContainer}>
+      <Main/>
+    </Box>
+  );
 }
