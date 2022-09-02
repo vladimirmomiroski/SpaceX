@@ -5,11 +5,16 @@ import { Box, Typography } from "@mui/material";
 const logoContainer = {
   display: "flex",
   alignItems: "center",
-  marginLeft: "1.5rem",
   ":hover": {
     cursor: "pointer",
   },
 };
+
+const logoImage = {
+  width:'2.5rem',
+  height: '2.5rem',
+  transform: 'rotate(-25deg)'
+}
 
 export default function NavbarLogo() {
   const location = useNavigate();
@@ -19,6 +24,7 @@ export default function NavbarLogo() {
       <Typography color={"secondary.secondary"} variant="h4">
         SpaceX
       </Typography>
+      <img style={logoImage} src="images/rocket.png" alt="rocket logo" />
     </Box>
   );
 }

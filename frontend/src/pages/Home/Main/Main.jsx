@@ -8,7 +8,7 @@ export default function Main() {
   const { missions } = useContext(Context);
 
   return <Grid container spacing={4}>
-    {missions.length && missions.map(el => (
+    {missions.map(el => (
         <MainItem key={el.id} item={el} />
     ))}
   </Grid>;

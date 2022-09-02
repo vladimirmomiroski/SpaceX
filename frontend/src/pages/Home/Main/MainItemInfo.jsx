@@ -5,7 +5,7 @@ import MainItemInfoDate from "./MainItemInfoDate";
 
 const infoBox = {
   padding: '1rem 0.7rem',
-  marginTop: '1rem',
+  marginTop: '1.2rem',
   backgroundColor: 'secondary.secondary',
   display:'flex',
   justifyContent: 'space-between',
@@ -21,7 +21,7 @@ export default function MainItemInfo({ success, date }) {
 
   return (
     <Box sx={infoBox}>
-      <Typography color={'main.primary'}>{successfullMessage}</Typography>
+      <Typography color={'primary.main'}>{successfullMessage}</Typography>
       <MainItemInfoDate launchDate={formattedDate}/>
     </Box>
   );

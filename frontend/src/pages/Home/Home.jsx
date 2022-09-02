@@ -3,9 +3,10 @@ import Main from "./Main/Main";
 import { Box } from '@mui/material';
 
 const mainContainer = {
-     width: '80%',
+     width: '85%',
      margin: '0 auto',
-     padding: '3rem 0'
+     padding: '4rem 0',
+     minHeight: 'calc(100vh - 183.6px)'
 }
 
 export default function Home() {
