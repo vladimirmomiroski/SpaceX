@@ -1,15 +1,22 @@
 const { mongoose } = require('mongoose');
 const express = require('express');
+const cors = require('cors')
 
 const app = express()
+app.use(cors())
 
-require('dotenv').config({ path:__dirname + '/./../.env' });
+app.use(express.json())
+
+require('dotenv').config()
+
+const DB_URL = process.env.DB_URL
+
 
 app.use('/', require('./routes/routes'));
 app.use('/comments', require('./routes/routes'));
 
 mongoose
-  .connect("mongodb+srv://vladimir:R8QqnGKLQrEW1F8v@cluster0.8wijq.mongodb.net/xSpace?retryWrites=true&w=majority",
+  .connect(DB_URL,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true

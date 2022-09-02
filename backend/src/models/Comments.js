@@ -1,12 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const CommentsSchema = mongoose.Schema(
-{
-  comment: 
-  {
+const CommentsSchema = mongoose.Schema({
+  comment: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
+  parentId: {
+    type: String,
+    reqired: true,
+  },
 });
 
-module.exports = mongoose.model('comments', CommentsSchema);
+module.exports = mongoose.model("comments", CommentsSchema);
